@@ -20,7 +20,7 @@
                     required>
             </div>
             <div class="form-group">
-                <label for="languages">Linguaggi</label>
+                <label for="languages">Type</label>
                 <input type="text" name="slug" id="slug" class="form-control" value="{{ $project->slug }}"
                     required>
             </div>

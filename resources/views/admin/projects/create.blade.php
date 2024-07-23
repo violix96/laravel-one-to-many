@@ -21,6 +21,18 @@
                 <label for="slug">Slug</label>
                 <input type="text" name="slug" id="slug" class="form-control" required>
             </div>
+            <div class="form-group">
+                <label for="description">Type</label>
+                <select class="form-select" aria-label="Default select example" name="type_id">
+                    <option value="">Seleziona il type</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}">
+                            {{ $type->title }}
+                        </option>
+                    @endforeach
+                </select>
+
+            </div>
             <button type="submit" class="btn btn-primary mt-3">Crea</button>
         </form>
     </div>
