@@ -26,9 +26,9 @@
             </div>
 
             <div class="form-group">
-                <label for="description">Type</label>
+                <label for="description">Categoria</label>
                 <select class="form-select" aria-label="Default select example" name="type_id">
-                    <option value="">Seleziona il type</option>
+                    <option value="">Seleziona la categoria</option>
                     @foreach ($types as $type)
                         <option value="{{ $type->id }}">
                             {{ $type->title }}

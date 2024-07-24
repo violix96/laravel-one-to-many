@@ -17,8 +17,12 @@ class Project extends Model
         'type_id',
     ];
 
-    public function type()
+    public function type() // 1 categoria / singolare 
     {
         return $this->belongsTo(Type::class);
     }
 }
+ //dipendente
+
+//  $post->category()
+//  $post->category->Model 

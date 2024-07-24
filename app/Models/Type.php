@@ -9,8 +9,11 @@ class Type extends Model
 {
     use HasFactory;
 
-    public function projects()
+    public function projects() //N post
     {
         return $this->hasMany(project::class);
     }
 }
+
+
+//principale 

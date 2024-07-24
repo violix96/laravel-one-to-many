@@ -5,7 +5,7 @@
         <h1>{{ $project->title }}</h1>
         <p>{{ $project->description }}</p>
         <p class="text-white">
-            <strong>Type: </strong>
+            <strong>Type:</strong>
             {{ $project->type ? $project->type->title : 'tipo non definito' }}
         </p>
         <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-warning">Modifica</a>

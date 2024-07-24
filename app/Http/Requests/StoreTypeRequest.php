@@ -11,7 +11,7 @@ class StoreTypeRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,15 @@ class StoreTypeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => ['required'],
+            'type_id' => ['required', 'integer', 'exists:type,id']
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'type_id' => 'Il campo type_id è obbligatorio e deve essere specificato.',
         ];
     }
 }

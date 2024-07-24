@@ -26,14 +26,15 @@ class ProjectController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $data = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
             'languages' => 'required|string|max:255',
             'slug' => 'required|string|max:255',
-            'type_id' => 'nullable|exists:types,id',
+            'type_id' => 'required|exists:types,id',
         ]);
-
+        // dd($data);
         Project::create($data);
 
         return redirect()->route('projects.index');
@@ -41,6 +42,7 @@ class ProjectController extends Controller
 
     public function show(Project $project)
     {
+
         return view('admin.projects.show', compact('project'));
     }
 
